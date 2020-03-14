@@ -1,0 +1,31 @@
+{
+  "name": "node_selenium",
+  "version": "1.0.0",
+  "description": "This is a sample project to run selenium tests in azure devops",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "node app/index.js",
+    "test": "./node_modules/.bin/mocha --reporter mocha-multi-reporters --exit",
+    "test-allure": "./node_modules/mocha/bin/mocha --reporter mocha-allure-reporter",
+    "test-report": "allure generate allure-results --clean -o allure-report && allure open allure-report",
+    "lint": "eslint **/*.js"
+  },
+  "keywords": [],
+  "author": "Nikhil Das Nomula",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "mocha-multi-reporters": "^1.1.7"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^6.2.0",
+    "mocha-allure-reporter": "^1.4.0",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "eslint": "^5.15.1"
+  },
+  "engines": {
+    "node": "10.16.3"
+  }
+}
